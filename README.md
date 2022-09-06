@@ -4,10 +4,11 @@ http://kimutis.lt/
 
 https://is.vu.lt/pls/klevas/am$lpd_adm_app.public_view_lpd_sandas?p_sarasas_id=161394CD4F64F8B6ACF5F4559704AA3F5EEC345680461531
 
--Class 9
--Name: Current_Balance
--description: it shows the current balance, it can be always updated(the user can add the balance es:salary, but it can't remove,it must use the expense)
--Attributes:
+
+Class:
+- Name: Current_Balance
+- Description: it shows the current balance, it can be always updated(the user can add the balance es:salary, but it can't remove,it must use the expense)
+- Attributes:
 
 Class : 
 - Name of class : Item;
