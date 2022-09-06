@@ -26,4 +26,6 @@ requirement :
 It would be cool to see the days, weeks, months (depending of the frequency selected) within the selected period, where the user spent the most, to make him aware of his consumption.
 
 
+Should we let the user to select the currency ? If so, we have to instanciate different instances from the class Current_Balance. Each instance for a currency.
+
 
