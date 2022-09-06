@@ -23,7 +23,7 @@ requirement :
 - Bar graphs that count the number of items registered in the app within the selected period. Frequency of the bar graph : could be selected (daily, weekly, monthly).
 
 
-It would be cool to see the days
+It would be cool to see the days, weeks, months (depending of the frequency selected) within the selected period, where the user spent the most, to make him aware of his consumption.
 
 
 
