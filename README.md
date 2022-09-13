@@ -8,7 +8,7 @@ https://github.com/niku-live
 
 _____
 
-
+06/09/2022
 
 Name of the company : 3MTech
 name of the app : 
@@ -45,5 +45,12 @@ ___
 UI : UNO Platform. Expenses tracker, so we want it to work a browser, on a phone.
 
 back end : ???
+
+We decided to begin (draw) the front end first in order to make sure that we have the same vision of the project.
+
+
+
+
+
 
 
