@@ -38,3 +38,11 @@ It would be cool to see the days, weeks, months (depending of the frequency sele
 Should we let the user to select the currency ? If so, we have to instanciate different instances from the class Current_Balance. Each instance for a currency.
 
 
+
+___
+13/09/2022
+
+UI : UNO Platform. Expenses tracker, so we want it to work a browser, on a phone
+back end : ???
+
+
