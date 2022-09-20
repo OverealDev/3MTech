@@ -49,6 +49,10 @@ back end : ???
 We decided to begin (draw) the front end first in order to make sure that we have the same vision of the project.
 
 
+___
+20/09/2022
+
+We won't use Uno Platform. Instead, we will use React and Node.js
 
 
 
