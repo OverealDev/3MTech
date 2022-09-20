@@ -54,6 +54,10 @@ ___
 
 We won't use Uno Platform. Instead, we will use React and Node.js
 
+Maxime : Mainly UI
+Mouni : mainly back-end
+Mathias : mainly back-end
+
 
 
 
