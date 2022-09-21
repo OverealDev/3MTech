@@ -60,6 +60,15 @@ function ExpenseForm(props) {
                             value={enteredDate}
                         />
                     </div>
+                    <div className="expense-form__control">
+                        <label>Type</label>
+                        <select>
+                            <option value="books">Books</option>
+                            <option value="food">Food</option>
+                            <option value="cleaning_stuff">Cleaning stuff</option>
+                        </select>
+
+                    </div>
                 </div>
                 <div className="expense-form__actions">
                     <button type="button" onClick={cancelHandler}>Cancel</button>
