@@ -5,6 +5,7 @@ function ExpenseForm(props) {
     const [enteredTitle, setEnteredTitle] = useState("");
     const [enteredAmount, setEnteredAmount] = useState("");
     const [enteredDate, setEnteredDate] = useState("");
+    const [enteredType, setEnteredType] = useState("");
 
     function titleChangeHandler(event) {
         setEnteredTitle(event.target.value);
@@ -18,8 +19,22 @@ function ExpenseForm(props) {
         setEnteredDate(event.target.value);
     }
 
+    function typeChangeHandler(event) {
+        setEnteredType(event.target.value);
+    }
+
     function submitHandler(event) {
-        event.preventDefault()
+        event.preventDefault();
+
+        const expenseData = {
+            title: enteredTitle,
+            amount: +enteredAmount,
+            date: new Date(enteredDate),
+            type: enteredType,
+            id: Math.random().toString()
+        };
+
+        props.onAddExpense(expenseData);
 
         setEnteredTitle('');
         setEnteredAmount('');
@@ -62,7 +77,7 @@ function ExpenseForm(props) {
                     </div>
                     <div className="expense-form__control">
                         <label>Type</label>
-                        <select>
+                        <select onChange={typeChangeHandler} value={enteredType}>
                             <option value="books">Books</option>
                             <option value="food">Food</option>
                             <option value="cleaning_stuff">Cleaning stuff</option>
