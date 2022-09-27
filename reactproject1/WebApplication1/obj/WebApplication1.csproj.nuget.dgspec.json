@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\mouni\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\obj\\",
+=======
+    "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+        "projectName": "WebApplication1",
+        "projectPath": "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\tatia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\obj\\",
+>>>>>>> 26134b20201badf4f599b1f1ff9298141945e592
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\mouni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\tatia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 26134b20201badf4f599b1f1ff9298141945e592
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
