@@ -1,7 +1,24 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+        "projectName": "WebApplication1",
+        "projectPath": "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\mouni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\obj\\",
+=======
+    "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {}
+>>>>>>> 3c606dfc6ca8e473d574ef8310db562dd3ea219b
   },
   "projects": {
     "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj": {
@@ -9,15 +26,30 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
+<<<<<<< HEAD
         "projectPath": "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication1\\obj\\",
+=======
+        "projectPath": "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\tatia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\obj\\",
+>>>>>>> 26134b20201badf4f599b1f1ff9298141945e592
+>>>>>>> 3c606dfc6ca8e473d574ef8310db562dd3ea219b
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+          "C:\\Users\\mouni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\tatia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 26134b20201badf4f599b1f1ff9298141945e592
+>>>>>>> 3c606dfc6ca8e473d574ef8310db562dd3ea219b
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

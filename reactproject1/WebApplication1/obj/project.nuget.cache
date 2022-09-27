@@ -1,8 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "w/w9PuycQffzS+xST7Xl9Xv56oKUOZHVRodpA4iVAVUo/TuXUifYQOnnOrsYHSba58tWdo+2/1jJD+86XhBiZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "iPjs3S63oh5MVFNxeAdG2cRTDNBpnHNxRANTfkUYzAvzY2E230r935nJNnl33eFefkdxxMq2aUdQ5nPGAtvEmg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mouni\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+=======
+  "dgSpecHash": "HRI+ofQhvRjf2FxsSrybQ01AYAts2seGu4iAY8k+AApe/JLXLwRYQU9SQLksEw9N8JXA5cQrp+JpSZdELie5PQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tatia\\source\\repos\\3MTech\\reactproject1\\WebApplication1\\WebApplication1.csproj",
+>>>>>>> 26134b20201badf4f599b1f1ff9298141945e592
+>>>>>>> 3c606dfc6ca8e473d574ef8310db562dd3ea219b
   "expectedPackageFiles": [],
   "logs": []
 }
