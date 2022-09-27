@@ -6,6 +6,8 @@ https://is.vu.lt/pls/klevas/am$lpd_adm_app.public_view_lpd_sandas?p_sarasas_id=1
 
 https://github.com/niku-live
 
+https://www.tutorialsteacher.com/webapi/web-api-controller
+
 _____
 
 06/09/2022
