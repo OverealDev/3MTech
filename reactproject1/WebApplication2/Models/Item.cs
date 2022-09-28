@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿
 
-namespace Classes
+namespace WebApplication2.Models
 {
     public class Item
     {
@@ -13,10 +13,10 @@ namespace Classes
 
         public void AddItem(int id, string title, float amount, DateTime date)
         {
-            this.Id = id;
-            this.Title = title;
-            this.Amount = amount;
-            this.Date = date; 
+            Id = id;
+            Title = title;
+            Amount = amount;
+            Date = date;
 
         }
 
