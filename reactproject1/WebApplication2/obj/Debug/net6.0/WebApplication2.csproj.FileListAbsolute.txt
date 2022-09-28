@@ -52,3 +52,14 @@ C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApp
 C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\obj\Debug\net6.0\WebApplication2.pdb
 C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\obj\Debug\net6.0\WebApplication2.genruntimeconfig.cache
 C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\obj\Debug\net6.0\ref\WebApplication2.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
