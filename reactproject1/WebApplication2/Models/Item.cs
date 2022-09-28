@@ -9,6 +9,9 @@ namespace WebApplication2.Models
         public string? Title { get; set; }
         public float Amount { get; set; }
         public DateTime Date { get; set; }
+        public Type Type { get; set; }
+
+        
 
 
         public void AddItem(int id, string title, float amount, DateTime date)
@@ -20,5 +23,10 @@ namespace WebApplication2.Models
 
         }
 
+    }
+
+    public enum Type
+    {
+        Books, Cleaning_stuff, Food
     }
 }
