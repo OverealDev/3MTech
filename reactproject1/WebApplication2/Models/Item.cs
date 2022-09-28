@@ -1,14 +1,20 @@
 ﻿
 
+using System.ComponentModel.DataAnnotations;
+
 namespace WebApplication2.Models
 {
     public class Item
     {
-
+        [Required]
         public int Id { get; set; }
-        public string? Title { get; set; }
+        [Required]
+        public string Title { get; set; }
+        [Required]
         public float Amount { get; set; }
+        [Required]
         public DateTime Date { get; set; }
+        [Required]
         public Type Type { get; set; }
 
         
