@@ -5,17 +5,18 @@ namespace Classes
     public class Item
     {
 
-        public string Name { get; set; }
         public int Id { get; set; }
-        public int Price { get; set; }
+        public string? Title { get; set; }
+        public float Amount { get; set; }
+        public DateTime Date { get; set; }
 
 
-        public void AddItem(string name, int id, int price)
+        public void AddItem(int id, string title, float amount, DateTime date)
         {
-            this.Name = name;
             this.Id = id;
-            this.Price = price;
-
+            this.Title = title;
+            this.Amount = amount;
+            this.Date = date; 
 
         }
 
