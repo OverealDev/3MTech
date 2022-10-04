@@ -20,11 +20,11 @@ namespace WebApplication2.Controllers
 
             var tmp = sr.ReadToEnd();
 
-            var ItemList = JsonConvert.DeserializeObject<Item[]>(tmp);
-            
-            
+            sr.Close();
 
-            content = ItemList;
+            content = JsonConvert.DeserializeObject<Item[]>(tmp);
+            
+            
         }
 
         [HttpGet]
