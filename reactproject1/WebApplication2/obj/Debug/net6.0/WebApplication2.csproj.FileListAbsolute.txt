@@ -63,3 +63,4 @@ C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApp
 C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\bin\Debug\net6.0\Newtonsoft.Json.dll

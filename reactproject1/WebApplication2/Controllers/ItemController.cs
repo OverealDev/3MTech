@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApplication2.Models;
 using System.IO;
-using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace WebApplication2.Controllers
 {
@@ -16,20 +16,15 @@ namespace WebApplication2.Controllers
         {
             var path = Path.Combine(Directory.GetCurrentDirectory(), "\\expenses.txt");
 
-            StreamReader sr = new("C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication2\\Controllers\\expenses.txt");
+            StreamReader sr = new(@"C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\Controllers\expenses.txt");
 
-            var tmp = sr.ReadLine();
+            var tmp = sr.ReadToEnd();
 
-            var ItemList = JsonSerializer.Deserialize<IList<Item>>(tmp);
+            var ItemList = JsonConvert.DeserializeObject<Item[]>(tmp);
+            
+            
 
-            Item[] tmpContent = Array.Empty<Item>();
-
-            foreach(var item in ItemList)
-            {
-                tmpContent = (Item[])tmpContent.Append(item);
-            }
-
-            content = tmpContent;
+            content = ItemList;
         }
 
         [HttpGet]
