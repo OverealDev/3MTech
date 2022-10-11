@@ -16,7 +16,7 @@ namespace WebApplication2.Controllers
         {
             var path = Path.Combine(Directory.GetCurrentDirectory(), "\\expenses.txt");
 
-            StreamReader sr = new(@"C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\Controllers\expenses.txt");
+            StreamReader sr = new(Path.Combine(Directory.GetCurrentDirectory(), "\\expenses.txt"));
 
             var tmp = sr.ReadToEnd();
 
@@ -25,7 +25,7 @@ namespace WebApplication2.Controllers
             content = JsonConvert.DeserializeObject<Item[]>(tmp);
             
             
-        }
+        } 
 
         [HttpGet]
         public IEnumerable<Item> Get()
