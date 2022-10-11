@@ -46,7 +46,6 @@ function App() {
         <div>
             <ExpenseForm onAddExpense={addExpenseHandler}/>
             <Expenses expenses={expenses} />
-            <LoginButton login-button={lo}/>
         </div>
     )
 } 
