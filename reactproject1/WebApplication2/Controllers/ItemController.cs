@@ -15,16 +15,14 @@ namespace WebApplication2.Controllers
 
         public ItemController()
         {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "\\expenses.txt");
+            var path = @"C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\Controllers\expenses.txt";
 
-            StreamReader sr = new(Path.Combine(Directory.GetCurrentDirectory(), "\\expenses.txt"));
+            using (StreamReader sr = new(path))
+            {
+                var tmp = sr.ReadToEnd();
 
-            var tmp = sr.ReadToEnd();
-
-            sr.Close();
-
-            content = JsonConvert.DeserializeObject<Item[]>(tmp);
-            
+                content = JsonConvert.DeserializeObject<Item[]>(tmp);
+            } 
             
         } 
 
