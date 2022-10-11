@@ -7,4 +7,4 @@ function LoginButton() {
             <button type="button" className="login-button" >Login</button></div>
     </div>
 }
-export default Firstview;
+export default LoginButton;
