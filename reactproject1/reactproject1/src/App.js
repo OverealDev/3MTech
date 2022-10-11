@@ -13,21 +13,22 @@ function App() {
 
     const fetchExpensesHandler = useCallback(async () => {
         try {
-            const response = await fetch('https://localhost:7267/api/Item');
-            if (!response.ok) {
-                throw new Error('Something went wrong!');
-            }
-
+            const response = await fetch('http://localhost:5267/api/Item');
+            //if (!response.ok) {
+            //    throw new Error('Something went wrong!');
+            //}
+            console.log("1")
             const data = await response.json();
-
+            console.log("2")
             const transformedExpenses = data.map((expenseData) => {
                 return {
                     id: expenseData.id,
                     title: expenseData.title,
                     amount: expenseData.amount,
-                    date: expenseData.date,
+                    date: new Date(Date.parse(expenseData.date)),
                 };
             });
+            console.log(transformedExpenses)
             setExpenses(transformedExpenses);
         } catch (error) {
             console.log(error.message);

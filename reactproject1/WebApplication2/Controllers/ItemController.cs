@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebApplication2.Models;
 using System.IO;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Cors;
 
 namespace WebApplication2.Controllers
 {
