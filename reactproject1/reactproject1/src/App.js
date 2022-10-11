@@ -1,9 +1,12 @@
 import ExpenseForm from "./components/ExpenseForm"
 import Expenses from "./components/Expenses"
+import LoginButton from "./components/LoginButton"
+
 import { useState, useEffect, useCallback } from 'react'
 
+
 function App() {
-    const [expenses, setExpenses] = useState("")
+    const [expenses, setExpenses, lo] = useState("")
 
     function addExpenseHandler(expense) {
         setExpenses((prevExpenses) => {
@@ -43,6 +46,7 @@ function App() {
         <div>
             <ExpenseForm onAddExpense={addExpenseHandler}/>
             <Expenses expenses={expenses} />
+            <LoginButton login-button={lo}/>
         </div>
     )
 } 
