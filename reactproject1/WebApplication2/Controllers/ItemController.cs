@@ -15,7 +15,7 @@ namespace WebApplication2.Controllers
 
         public ItemController()
         {
-            var path = @"C:\Users\Maxime\Desktop\S5\software_engineering_I_II\3MTech\reactproject1\WebApplication2\Controllers\expenses.txt";
+            var path = @".\Controllers\expenses.txt";
 
             using (StreamReader sr = new(path))
             {
