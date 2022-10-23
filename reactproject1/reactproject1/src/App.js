@@ -6,7 +6,7 @@ import { useState, useEffect, useCallback } from 'react'
 
 
 function App() {
-    const [expenses, setExpenses, lo] = useState("")
+    const [expenses, setExpenses] = useState("")
 
     function addExpenseHandler(expense) {
         setExpenses((prevExpenses) => {
