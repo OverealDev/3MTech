@@ -45,11 +45,19 @@ namespace WebApplication2.Controllers
             return CreatedAtAction(nameof(GetById), new { id = item.Id }, item);
         }
 
-        /*
+        
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Delete(int id)
         {
+            var issueToDelete = await _context.Items.FindAsync(id);
+            if (issueToDelete == null) return NotFound();
+            
+            _context.Items.Remove(issueToDelete);
+            await _context.SaveChangesAsync();
 
-        }*/
+            return NoContent();
+        }
     }
 }
