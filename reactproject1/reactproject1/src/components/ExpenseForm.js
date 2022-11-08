@@ -23,19 +23,39 @@ function ExpenseForm(props) {
         setEnteredType(event.target.value);
     }
 
-    function submitHandler(event) {
+    async function submitHandler(event) {
         event.preventDefault();
 
         const expenseData = {
+            id: Math.floor(Math.random() * 1000) + 1,
             title: enteredTitle,
             amount: +enteredAmount,
             date: new Date(enteredDate),
-            type: enteredType,
-            id: Math.random().toString()
+            type: 1,
+            
         };
+        const expenseData2 = {
+            title: enteredTitle,
+            amount: +enteredAmount,
+            date: new Date(enteredDate),
+            type: 1,
+
+        };
+
 
         props.onAddExpense(expenseData);
 
+        const url = 'http://localhost:5267/api/Item'
+
+        const expense = JSON.stringify(expenseData2)
+
+        console.log(expense)
+
+        const response = await fetch(url, { method: 'POST', body: expense, headers: { 'Content-Type': 'application/json' } })
+
+        const data = await response.json()
+
+        
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
@@ -78,9 +98,9 @@ function ExpenseForm(props) {
                     <div className="expense-form__control">
                         <label>Type</label>
                         <select onChange={typeChangeHandler} value={enteredType}>
-                            <option value="books">Books</option>
-                            <option value="food">Food</option>
-                            <option value="cleaning_stuff">Cleaning stuff</option>
+                            <option value="1">Books</option>
+                            <option value="2">Food</option>
+                            <option value="3">Cleaning stuff</option>
                         </select>
 
                     </div>
