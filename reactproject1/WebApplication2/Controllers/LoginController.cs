@@ -21,7 +21,7 @@ namespace WebApplication2.Controllers
             [HttpPost]
             public ActionResult Index(Models.Login objuserlogin)
             {
-                var display = Userloginvalues().Where(m => m.UserName == objuserlogin.UserName && m.UserPassword == objuserlogin.UserPassword).FirstOrDefault();
+                var display = Userloginvalues("User1","passwrd").Where(m => m.UserName == objuserlogin.UserName && m.UserPassword == objuserlogin.UserPassword).FirstOrDefault();
                 if (display != null)
                 {
                     ViewBag.Status = "Logging in";
@@ -33,10 +33,10 @@ namespace WebApplication2.Controllers
                 }
                 return View(objuserlogin);
             }
-            public List<Models.Login> Userloginvalues()
+            public List<Models.Login> Userloginvalues(String UserName_, String UserPassword_)
             {
                 List<Models.Login> objModel = new List<Models.Login>();
-                objModel.Add(new Models.Login { UserName = "user1", UserPassword = "hi" });
+                objModel.Add(new Models.Login { UserName = UserName_, UserPassword = UserPassword_ });
            
                 return objModel;
             }
