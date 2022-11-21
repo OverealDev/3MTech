@@ -7,7 +7,7 @@ namespace _3MTechTests
     public class ItemControllerTests
     {
         [TestMethod]
-        public void ()
+        public void itemcontroller_test()
         {
             
 
