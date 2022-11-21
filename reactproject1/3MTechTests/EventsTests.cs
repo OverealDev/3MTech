@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using WebApplication2.Events;
 namespace _3MTechTests
 {
@@ -14,7 +14,7 @@ namespace _3MTechTests
             Events events = new Events();   
 
             // Act and assert
-            // Assert.ThrowsException<WebApplication2.Events.OverpricedEventArgs>(() => events.CheckingIfOverpriced(amountAbove));
+            Assert.ThrowsException<WebApplication2.Events.OverpricedEventArgs>(() => events.CheckingIfOverpriced(amountAbove));
         }
     }
-}
+}*/
