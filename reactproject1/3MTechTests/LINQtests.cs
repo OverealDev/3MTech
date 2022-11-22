@@ -37,7 +37,7 @@ namespace _3MTechTests
 
 
             LINQRequests requests = new LINQRequests();
-            Lazy<IEnumerable<PriceAndType>> results = requests.LINQFunction(items);
+            Lazy<IEnumerable<PriceAndType>> results = requests.LINQFunction<IEnumerable<PriceAndType>>(items);
             IEnumerable<PriceAndType> results_ = (IEnumerable<PriceAndType>)LazyInitializer.EnsureInitialized(ref results);
 
 

@@ -49,7 +49,7 @@ namespace WebApplication2.Models
     public class LINQRequests
     {
 
-        public Lazy<IEnumerable<PriceAndType>> LINQFunction(List<Item> itemList)
+        public Lazy<T> LINQFunction<T>(List<Item> itemList)
         {
 
    
@@ -71,7 +71,7 @@ namespace WebApplication2.Models
 
 
 
-            return (Lazy<IEnumerable<PriceAndType>>)PricePerType_;
+            return (Lazy<T>)PricePerType_;
 
         }
     }
