@@ -49,14 +49,16 @@ namespace WebApplication2.Models
     public class LINQRequests
     {
 
-        public IQueryable<PriceAndType> LINQFunction(Item item1, Item item2, Item item3, Item item4)
+        public Lazy<IEnumerable<PriceAndType>> LINQFunction(List<Item> itemList)
         {
-            List<Item> itemList = new List<Item> { item1, item2, item3, item4 };
+
+   
+            
             Current_balance current_balance = new Current_balance("Euro", itemList);
 
 
 
-            var PricePerType_ = from item in itemList
+             var PricePerType_ = from item in itemList
                                 group item by new
                                 {
                                     item.Type
@@ -65,10 +67,11 @@ namespace WebApplication2.Models
                                 {
                                     Average = rows.Average(p => p.Amount),
                                     PriceType = rows.Key.Type
-
                                 };
 
-            return (IQueryable<PriceAndType>)PricePerType_;
+
+
+            return (Lazy<IEnumerable<PriceAndType>>)PricePerType_;
 
         }
     }

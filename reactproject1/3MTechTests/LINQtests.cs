@@ -29,8 +29,18 @@ namespace _3MTechTests
             item4.Amount = 6;
             item4.Type = WebApplication2.Models.Type.Cleaning_stuff;
 
+            List<Item> items = new List<Item>();
+            items.Add(item1);
+            items.Add(item2);
+            items.Add(item3);
+            items.Add(item4);
+
+
             LINQRequests requests = new LINQRequests();
-            IQueryable<PriceAndType> results = requests.LINQFunction(item1, item2, item3, item4);
+            Lazy<IEnumerable<PriceAndType>> results = requests.LINQFunction(items);
+            IEnumerable<PriceAndType> results_ = (IEnumerable<PriceAndType>)LazyInitializer.EnsureInitialized(ref results);
+
+
 
             bool flag = true;
             int compter = -1;
@@ -38,16 +48,20 @@ namespace _3MTechTests
             TrueResult.Add(10 / 3);
             TrueResult.Add(6);
 
-            foreach (PriceAndType tests in results)
+            if (results != null)
             {
-
-                compter = compter + 1;
-                if ((tests.Average) != TrueResult[compter])
+                foreach (PriceAndType tests in results_)
                 {
-                    flag = false;
-                }
 
+                    compter = compter + 1;
+                    if ((tests.Average) != TrueResult[compter])
+                    {
+                        flag = false;
+                    }
+
+                }
             }
+            
 
             Assert.IsTrue(flag);
 
