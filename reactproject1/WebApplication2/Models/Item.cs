@@ -29,10 +29,51 @@ namespace WebApplication2.Models
 
         }
 
+
+        
+
     }
 
     public enum Type
     {
         Books, Cleaning_stuff, Food
     }
+
+    public class PriceAndType
+    {
+        public float Average { get; set; }
+        public Type PriceType { get; set; }
+    }
+
+
+    public class LINQRequests
+    {
+
+        public Lazy<T> LINQFunction<T>(List<Item> itemList)
+        {
+
+   
+            
+            Current_balance current_balance = new Current_balance("Euro", itemList);
+
+
+
+             var PricePerType_ = from item in itemList
+                                group item by new
+                                {
+                                    item.Type
+                                } into rows
+                                select new
+                                {
+                                    Average = rows.Average(p => p.Amount),
+                                    PriceType = rows.Key.Type
+                                };
+
+
+
+            return (Lazy<T>)PricePerType_;
+
+        }
+    }
+
 }
