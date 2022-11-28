@@ -37,6 +37,11 @@ const Login = (props) => {
     };
 
     const submitHandler = (event) => {
+        try {
+            const response = await fetch('https://localhost:5001/api/User');
+            
+        } catch (error) {
+            console.log(error.message);
         event.preventDefault();
         props.onLogin(enteredEmail, enteredPassword);
     };

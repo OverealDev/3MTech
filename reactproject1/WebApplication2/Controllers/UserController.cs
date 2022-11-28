@@ -35,6 +35,15 @@ namespace WebApplication2.Controllers
             return user == null ? NotFound() : Ok(user);
         }
 
+        [HttpGet("getuser")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public Task<IActionResult> GetByEmailPassword(string email, string password)
+        {
+            var user = _context.Users.Where(a => a.Email == email && a.Password == password);
+            return user == null ? NotFound() : Ok(user);
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create(User user)
