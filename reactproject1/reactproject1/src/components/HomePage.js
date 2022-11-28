@@ -14,7 +14,7 @@ function HomePage() {
 
     const fetchExpensesHandler = useCallback(async () => {
         try {
-            const response = await fetch('https://localhost:5001/api/Item');
+            const response = await fetch('https://localhost:5001/api/Item'); 
             //if (!response.ok) {
             //    throw new Error('Something went wrong!');
             //}
