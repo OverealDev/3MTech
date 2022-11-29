@@ -17,6 +17,8 @@ namespace WebApplication2.Models
         [Required]
         public Type Type { get; set; }
 
+        public int UserId { get; set; }
+
         
 
 
