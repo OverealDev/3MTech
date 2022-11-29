@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Cors;
 using WebApplication2.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace WebApplication2.Controllers
 {
@@ -34,7 +35,16 @@ namespace WebApplication2.Controllers
             var item = await _context.Items.FindAsync(id);
             return item == null ? NotFound() : Ok(item);    
         }
-        
+
+        [HttpGet("getuseritems")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IEnumerable<Item> GetByUserId(int userid)
+        {
+            var items = _context.Items.Where(a => a.UserId == userid).ToList();
+            return items;
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create(Item item)
