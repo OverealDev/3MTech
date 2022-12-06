@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from 'react'
 import Expenses from "./Expenses"
 import ExpenseForm from "./ExpenseForm"
 
-function HomePage() {
+function HomePage(props) {
 
     const [expenses, setExpenses] = useState("")
 
@@ -14,10 +14,11 @@ function HomePage() {
 
     const fetchExpensesHandler = useCallback(async () => {
         try {
-            const response = await fetch('https://localhost:5001/api/Item'); 
+            const response = await fetch('http://localhost:5267/api/Item/getuseritems?userid=' + props.id); 
             //if (!response.ok) {
             //    throw new Error('Something went wrong!');
             //}
+            console.log(props.id)
             console.log("1")
             const data = await response.json();
             console.log("2")
@@ -43,8 +44,8 @@ function HomePage() {
 
     return (
         <div>
-            <ExpenseForm onAddExpense={addExpenseHandler} />
-            <Expenses expenses={expenses} />
+            <ExpenseForm onAddExpense={addExpenseHandler} id={props.id} />
+            <Expenses expenses={expenses}  />
         </div>
     )
 }

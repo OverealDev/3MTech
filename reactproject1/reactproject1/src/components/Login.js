@@ -8,6 +8,7 @@ const Login = (props) => {
     const [enteredPassword, setEnteredPassword] = useState('');
     const [passwordIsValid, setPasswordIsValid] = useState();
     const [formIsValid, setFormIsValid] = useState(false);
+    const [userId, setUserId] = useState()
 
     useEffect(() => {
         const identifier = setTimeout(() => {
@@ -37,14 +38,41 @@ const Login = (props) => {
     };
 
     const submitHandler = (event) => {
-        try {
-            const response = await fetch('https://localhost:5001/api/User');
+
+
+        fetch('http://localhost:5267/api/User/getuser?email=' + enteredEmail + '&password=' + enteredPassword).then(function (response) {
+            const data = response.json()
+            if (!response.ok) {
+                // make the promise be rejected if we didn't get a 2xx response
+                console.log("PAS OK")
+            } else {
+                // got the desired response
+                
+                data.then(res => {
+                    props.onLogin(enteredEmail, enteredPassword, res.id)
+                    console.log("OK")
+                })
+                
+                
+            }
+        }).catch(function (err) {
+            console.log(err)
+        });
+
+        event.preventDefault()
+
+
+    }
+
+        
+
             
-        } catch (error) {
-            console.log(error.message);
-        event.preventDefault();
-        props.onLogin(enteredEmail, enteredPassword);
-    };
+            
+        
+
+        
+        
+    //};
 
     return (
         

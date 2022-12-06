@@ -9,16 +9,20 @@ function App() {
     
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userId, setUserId] = useState()
 
 
-    function loginHandler() {
+    function loginHandler(email, password, id) {
         setIsLoggedIn(true)
+        setUserId(id)
+        console.log(id)
+        console.log(email)
     }
 
     return (
         <div>
             {!isLoggedIn && <Login onLogin={loginHandler} />}
-            {isLoggedIn && <HomePage />}
+            {isLoggedIn && <HomePage id={userId} />}
         </div>
     )
 } 

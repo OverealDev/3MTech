@@ -32,6 +32,7 @@ function ExpenseForm(props) {
             amount: +enteredAmount,
             date: new Date(enteredDate),
             type: 1,
+            userid: props.id
             
         };
         const expenseData2 = {
@@ -39,7 +40,7 @@ function ExpenseForm(props) {
             amount: +enteredAmount,
             date: new Date(enteredDate),
             type: 1,
-
+            userid: props.id
         };
 
 
