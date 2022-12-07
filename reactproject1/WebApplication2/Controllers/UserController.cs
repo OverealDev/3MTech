@@ -44,6 +44,15 @@ namespace WebApplication2.Controllers
             return user == null ? NotFound() : Ok(user);
         }
 
+        [HttpGet("getuserbyemail")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetByEmail(string email)
+        {
+            var user = _context.Users.Where(a => a.Email == email).FirstOrDefault();
+            return user == null ? NotFound() : Ok(user);
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create(User user)

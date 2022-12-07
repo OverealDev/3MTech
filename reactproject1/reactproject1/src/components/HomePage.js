@@ -45,7 +45,7 @@ function HomePage(props) {
     return (
         <div>
             <ExpenseForm onAddExpense={addExpenseHandler} id={props.id} />
-            <Expenses expenses={expenses}  />
+            <Expenses expenses={expenses} />
         </div>
     )
 }
