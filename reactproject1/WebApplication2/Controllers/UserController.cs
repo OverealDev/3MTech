@@ -20,6 +20,12 @@ namespace WebApplication2.Controllers
             _context = context;
         }
 
+        public ItemDbContext getContextUserController()
+        {
+            return this._context;
+        }
+
+
         [HttpGet]
         public async Task<IEnumerable<User>> Get()
         {
