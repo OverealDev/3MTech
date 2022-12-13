@@ -20,6 +20,12 @@ namespace WebApplication2.Controllers
             _context = context;
         }
 
+        public ItemDbContext getContextUserController()
+        {
+            return this._context;
+        }
+
+
         [HttpGet]
         public async Task<IEnumerable<User>> Get()
         {
@@ -43,6 +49,15 @@ namespace WebApplication2.Controllers
              var user = _context.Users.Where(a => a.Email == email && a.Password == password).FirstOrDefault();
             
             
+            return user == null ? NotFound() : Ok(user);
+        }
+
+        [HttpGet("getuserbyemail")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetByEmail(string email)
+        {
+            var user = _context.Users.Where(a => a.Email == email).FirstOrDefault();
             return user == null ? NotFound() : Ok(user);
         }
 
