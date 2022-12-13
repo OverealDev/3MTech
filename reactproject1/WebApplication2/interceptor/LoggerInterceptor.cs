@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Diagnostics;
+﻿
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Reflection;
+
 
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
 public class LoggerInterceptor : Attribute, IInterceptor
