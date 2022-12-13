@@ -4053,23 +4053,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Maxime\\.nuget\\packages\\": {},
+    "C:\\Users\\mouni\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "C:\\Users\\mouni\\Source\\Repos\\OverealDev\\3MTech\\reactproject1\\WebApplication2\\WebApplication2.csproj",
       "projectName": "WebApplication2",
-      "projectPath": "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication2\\WebApplication2.csproj",
-      "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maxime\\Desktop\\S5\\software_engineering_I_II\\3MTech\\reactproject1\\WebApplication2\\obj\\",
+      "projectPath": "C:\\Users\\mouni\\Source\\Repos\\OverealDev\\3MTech\\reactproject1\\WebApplication2\\WebApplication2.csproj",
+      "packagesPath": "C:\\Users\\mouni\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mouni\\Source\\Repos\\OverealDev\\3MTech\\reactproject1\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mouni\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
