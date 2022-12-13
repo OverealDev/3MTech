@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Data;
+using WebApplication2.Middleware;
+using Grpc.Core.Interceptors;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -13,6 +15,8 @@ builder.Services.AddCors(options =>
                           policy.WithOrigins("https://localhost:3000").AllowAnyHeader();
                       });
 });
+
+
 
 // Add services to the container.
 
@@ -31,6 +35,7 @@ app.UseCors(MyAllowSpecificOrigins);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseLog();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

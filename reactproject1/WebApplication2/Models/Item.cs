@@ -1,11 +1,16 @@
 ﻿
 
+using Grpc.Core;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 
 namespace WebApplication2.Models
 {
+
+    
     public class Item
     {
+        private static LoggerInterceptor _loggerInterceptor ;
         [Required]
         public int Id { get; set; }
         [Required]
@@ -19,20 +24,35 @@ namespace WebApplication2.Models
 
         public int UserId { get; set; }
 
-        
+     
 
 
         public void AddItem(int id, string title, float amount, DateTime date)
         {
-            Id = id;
-            Title = title;
-            Amount = amount;
-            Date = date;
+
+           _loggerInterceptor = new LoggerInterceptor();
+            try
+            {
+                _loggerInterceptor.OnEnter(typeof(Program), null,AddItem(), new object { });
+
+                Id = id;
+                Title = title;
+                Amount = amount;
+                Date = date;
+            }
+
+            catch(Exception e)
+            {
+                _loggerInterceptor.OnException(e);
+                throw;  
+            }
+            finally
+            {
+                _loggerInterceptor.OnExit();
+            }
 
         }
 
-
-        
 
     }
 

@@ -40,7 +40,9 @@ namespace WebApplication2.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetByEmailPassword(string email, string password)
         {
-            var user = _context.Users.Where(a => a.Email == email && a.Password == password).FirstOrDefault();
+             var user = _context.Users.Where(a => a.Email == email && a.Password == password).FirstOrDefault();
+            
+            
             return user == null ? NotFound() : Ok(user);
         }
 
