@@ -28,7 +28,7 @@ namespace _3MTechTests
         }
 
         [TestMethod]
-        public async Task UserController_Get_returnContextUsers()
+     public async Task UserController_Get_returnContextUsers()
         {
             //Arrange
             DbContextOptions<ItemDbContext> options = new DbContextOptions<ItemDbContext>();
