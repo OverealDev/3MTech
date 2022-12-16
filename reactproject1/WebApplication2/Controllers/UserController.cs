@@ -39,7 +39,7 @@ namespace WebApplication2.Controllers
         {
             var user = await _context.Users.FindAsync(id);
             return user == null ? NotFound() : Ok(user);
-        }
+        }   
 
         [HttpGet("getuser")]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
