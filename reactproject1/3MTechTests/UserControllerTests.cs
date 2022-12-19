@@ -128,5 +128,36 @@ namespace _3MTechTests
 
 
         }
+
+
+        [TestMethod]
+
+        public async Task UserController_Delete_returnCode404()
+        {
+            //Arrange
+            DbContextOptions<ItemDbContext> options = new DbContextOptions<ItemDbContext>();
+            ItemDbContext context = new ItemDbContext(options);
+            UserController userController = new UserController(context);
+            int userid = -1;
+            int id2 = -2;
+
+            //Act
+            var action = await userController.Delete(userid);
+            var actionResult = action as StatusCodeResult;
+
+            var action2 = await userController.Delete(id2);
+            var actionResult2 = action2 as StatusCodeResult;
+
+            //Assert
+
+            //trying to delete an object than doesn't exists
+            Assert.IsNotNull(actionResult);
+            Assert.AreEqual(404, actionResult.StatusCode);
+
+            //trying to delete an object than exists
+            //Assert.IsNotNull(actionResult2);
+            //Assert.AreEqual(204, actionResult.StatusCode);
+
+        }
     }
 }

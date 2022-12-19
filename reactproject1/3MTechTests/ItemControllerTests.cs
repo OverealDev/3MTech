@@ -50,8 +50,8 @@ namespace _3MTechTests
             ItemDbContext context = new ItemDbContext(options);
             ItemController itemController = new ItemController(context);
 
-            int id1 = 1;
-            int id2 = 3;
+            int id1 = 4;
+            int id2 = -2;
 
             //Act
             var item1 = await itemController.GetById(id1);
@@ -69,7 +69,7 @@ namespace _3MTechTests
 
         [TestMethod]
 
-        public async Task ItemController_GetByUserId_returnItem()
+        public void ItemController_GetByUserId_returnItem()
         {
             //Arrange
             DbContextOptions<ItemDbContext> options = new DbContextOptions<ItemDbContext>();
@@ -97,6 +97,58 @@ namespace _3MTechTests
             Assert.IsTrue(items1.Count() == 0);
 
             Enumerable.SequenceEqual(items2.OrderBy(t => t), items2Real.OrderBy(t => t));
+
+        }
+
+        [TestMethod]
+
+        public async Task ItemController_Create_returnCode201()
+        {
+            //Arrange
+            DbContextOptions<ItemDbContext> options = new DbContextOptions<ItemDbContext>();
+            ItemDbContext context = new ItemDbContext(options);
+            ItemController itemController = new ItemController(context);
+
+            DateTime DT2 = new DateTime(2021, 06, 14, 0, 0, 0);
+            Item item = new Item(2, "test2", 5, DT2, WebApplication2.Models.Type.Food, 1);
+
+            //Act
+            var action = await itemController.Create(item);
+            var actionResult = action as StatusCodeResult;
+
+            //Assert
+            Assert.IsNotNull(actionResult);
+            Assert.AreEqual(201, action);
+
+        }
+
+        [TestMethod]
+
+        public async Task ItemController_Delete_returnCode404()
+        {
+            //Arrange
+            DbContextOptions<ItemDbContext> options = new DbContextOptions<ItemDbContext>();
+            ItemDbContext context = new ItemDbContext(options);
+            ItemController itemController = new ItemController(context);
+            int id = -1;
+            int id2 = -2;
+
+            //Act
+            var action = await itemController.Delete(id);
+            var actionResult = action as StatusCodeResult;
+
+            var action2 = await itemController.Delete(id2);
+            var actionResult2 = action2 as StatusCodeResult;
+
+            //Assert
+
+            //trying to delete an object than doesn't exists
+            Assert.IsNotNull(actionResult);
+            Assert.AreEqual(404, actionResult.StatusCode);
+
+            //trying to delete an object than exists
+            //Assert.IsNotNull(actionResult2);
+            //Assert.AreEqual(204, actionResult.StatusCode);
 
         }
     }
