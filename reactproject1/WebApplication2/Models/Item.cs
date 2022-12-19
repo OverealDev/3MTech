@@ -31,14 +31,6 @@ namespace WebApplication2.Models
             UserId = userId;
         }
 
-        public void AddItem(int id, string title, float amount, DateTime date)
-        {
-            Id = id;
-            Title = title;
-            Amount = amount;
-            Date = date;
-
-        }
 
         public int CompareTo(Item other)
         {
