@@ -128,26 +128,5 @@ namespace _3MTechTests
 
 
         }
-
-        [TestMethod]
-        public async Task UserController_create_createUser()
-        {
-            //Arrange
-            DbContextOptions<ItemDbContext> options = new DbContextOptions<ItemDbContext>();
-            ItemDbContext context = new ItemDbContext(options);
-            UserController userController = new UserController(context);
-
-            //Act
-
-
-            //Assert
-
-
-        }
-
-
-
-
-
     }
 }

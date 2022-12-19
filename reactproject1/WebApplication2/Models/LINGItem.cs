@@ -6,9 +6,12 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Item item1 = new Item();
-        Item item2 = new Item();
-        Item item3 = new Item();
+
+        DateTime DT2 = new DateTime(2021, 06, 14, 0, 0, 0);
+
+        Item item1 = new Item(2, "test2", 5, DT2, WebApplication2.Models.Type.Food, 1);
+        Item item2 = new Item(2, "test2", 5, DT2, WebApplication2.Models.Type.Food, 1);
+        Item item3 = new Item(2, "test2", 5, DT2, WebApplication2.Models.Type.Food, 1);
 
         item1.Amount = 3;
         item1.Type = Type.Books;
