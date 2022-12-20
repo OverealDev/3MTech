@@ -21,6 +21,11 @@ namespace WebApplication2.Controllers
             _context = context;
         } 
 
+        public ItemDbContext getContextItemController()
+        {
+            return this._context;
+        }
+
         [HttpGet]
         public async Task<IEnumerable<Item>> Get()
         {
