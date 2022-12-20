@@ -1,5 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Data;
+using Autofac;
+using Autofac.Extras.DynamicProxy;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Autofac.Extensions.DependencyInjection;
+using WebApplication2.Middleware;
+using WebApplication2.Models;
+using Serilog;
+using WebApplication2.Controllers;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -18,7 +31,16 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+
+ void ConfigureContainer(ContainerBuilder builder)
+{
+    builder.RegisterType<UserController>().EnableInterfaceInterceptors().InterceptedBy(typeof(LoggerInterceptor)).InstancePerDependency();
+    builder.Register(x => Log.Logger).SingleInstance();
+    builder.RegisterType<LoggerInterceptor>().SingleInstance();
+}
+
+
+    builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ItemDbContext>(
     o => o.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
@@ -31,6 +53,7 @@ app.UseCors(MyAllowSpecificOrigins);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseLog();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
