@@ -6,8 +6,10 @@
     "\\reactproject1\\reactproject1\\src",
     "\\reactproject1\\WebApplication1",
     "\\reactproject1\\WebApplication2",
-    "\\reactproject1\\WebApplication2\\Controllers"
+    "\\reactproject1\\WebApplication2\\Controllers",
+    "\\reactproject1\\WebApplication2\\Interceptor",
+    "\\reactproject1\\WebApplication2\\Middleware"
   ],
-  "SelectedNode": "\\reactproject1\\reactproject1.sln",
+  "SelectedNode": "\\reactproject1\\WebApplication2\\Middleware\\Middleware.cs",
   "PreviewInSolutionExplorer": false
 }
