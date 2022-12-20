@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using WebApplication2.Events;
 namespace _3MTechTests
 {
@@ -11,10 +11,13 @@ namespace _3MTechTests
             // Arrange
             decimal amountAbove = 100_000_000_000;
             decimal amountBelow = 10;
-            Events events = new Events();   
+            Events events = new Events();
 
-            // Act and assert
-            Assert.ThrowsException<WebApplication2.Events.OverpricedEventArgs>(() => events.CheckingIfOverpriced(amountAbove));
+
+            events.checkingIfOverpriced(amountAbove);
+
+
+           
         }
     }
-}*/
+}

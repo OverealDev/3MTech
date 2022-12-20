@@ -4,37 +4,47 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication2.Models
 {
-    public class Item
+    public class Item : IComparable<Item>
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
-        [Required]
+        //[Required]
         public string Title { get; set; }
-        [Required]
+        //[Required]
         public float Amount { get; set; }
-        [Required]
+        //[Required]
         public DateTime Date { get; set; }
-        [Required]
+        //[Required]
         public Type Type { get; set; }
 
         public int UserId { get; set; }
 
         
 
-
-        public void AddItem(int id, string title, float amount, DateTime date)
+        public Item(int id, string title, float amount, DateTime date, Type type, int userId)
         {
             Id = id;
             Title = title;
             Amount = amount;
             Date = date;
-
+            Type = type;
+            UserId = userId;
         }
 
 
-        
-
+        public int CompareTo(Item other)
+        {
+            if (other.Id == this.Id && other.Title == this.Title && other.Amount == this.Amount && other.UserId == this.UserId && this.Date == other.Date)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
     }
+
 
     public enum Type
     {
